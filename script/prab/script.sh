@@ -99,6 +99,12 @@ obladi  IN      A       10.78.3.4
 desmond IN      A       10.78.3.5
 oblada  IN      A       10.78.3.6
 molly   IN      A       10.78.3.7
+alpha     IN      TXT     "alpha"
+beta      IN      TXT     "beta"
+gamma     IN      TXT     "gamma"
+delta     IN      TXT     "delta"
+epsilon   IN      TXT     "epsilon"
+outbound    IN    CNAME    http.badssl.com.
 
 ; A Record untuk vault (obladi & desmond)
 vault   IN      A       10.78.3.4
