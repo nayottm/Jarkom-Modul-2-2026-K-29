@@ -533,4 +533,76 @@ host -t PTR 10.78.3.4 10.78.3.3
 
 ## Soal 17
 
-_(kosong di dokumen asli)_
+### Di prab
+
+```bash
+nano /etc/bind/jarkom/K29.com
+```
+add nano
+```bash
+alpha     IN      TXT     "alpha"
+beta      IN      TXT     "beta"
+gamma     IN      TXT     "gamma"
+delta     IN      TXT     "delta"
+epsilon   IN      TXT     "epsilon"
+```
+update serial number
+```bash
+service bind9 restart
+```
+### Cek di klien
+
+```bash
+host -t TXT alpha.K29.com
+host -t TXT beta.K29.com
+host -t TXT delta.K29.com
+```
+
+## Soal 18
+
+### Di prab
+
+```bash
+nano /etc/bind/jarkom/K29.com
+```
+nano update
+```bash
+abbey   15      IN      A       10.99.99.99
+```
+update serial number
+```bash
+service bind9 restart
+```
+### Cek di klien
+
+```bash
+host abbey.K29.com
+```
+output: ip lama
+setelah 15 - 20 detik
+
+```bash
+host abbey.K29.com
+```
+output ip baru
+
+## Soal 19
+
+### Di prab
+
+```bash
+nano /etc/bind/jarkom/K29.com
+```
+nano add
+```bash
+outbound    IN    CNAME    http.badssl.com.
+```
+update serial number
+```bash
+service bind9 restart
+```
+### Cek di klien
+
+```bash
+curl -L http://outbound.K29.com
+```
